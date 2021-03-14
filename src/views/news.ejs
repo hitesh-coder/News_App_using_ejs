@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">H News</div>
+        <div class="search-bar">Search</div>
+    </header>
+
+    <div class="wrapper">
+        <div class="news">
+                <% articles.forEach(function(article) { %>
+                    <a href="<%= article.url  %> " class="news-card">
+                        <img src="<%= article.urlToImage  %> " alt="" srcset="">
+                        <h2>
+                            <%= article.title %>
+                        </h2>
+                        <p>
+                            <%= article.description %>
+                        </p>
+                    </a>
+                    <% }) %>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
